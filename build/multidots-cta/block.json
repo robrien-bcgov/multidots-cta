@@ -3,13 +3,60 @@
   "apiVersion": 3,
   "name": "create-block/multidots-cta",
   "version": "0.1.0",
-  "title": "Multidots Cta",
-  "category": "widgets",
-  "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "title": "This is a CTA block",
+  "category": "design",
+  "icon": "feedback",
+  "description": "A simple call to action block.",
+  "keywords": [
+    "call to action",
+    "cta",
+    "multidots",
+    "marketing"
+  ],
   "example": {},
   "supports": {
-    "html": false
+    "html": true,
+    "color": {},
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "align": true,
+    "anchor": true
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "div"
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "color": {
+          "text": "#1f1f1f",
+          "background": "#ffeda3"
+        },
+        "spacing": {
+          "padding": {
+            "top": "20px",
+            "right": "20px",
+            "bottom": "20px",
+            "left": "20px"
+          },
+          "margin": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "0px"
+          }
+        },
+        "typography": {
+          "fontSize": "16px",
+          "lineHeight": "1.5"
+        }
+      }
+    }
   },
   "textdomain": "multidots-cta",
   "editorScript": "file:./index.js",

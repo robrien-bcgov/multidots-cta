@@ -11,7 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText, BlockControls } from '@wordpress/block-editor';
+import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,10 +30,31 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit( { attributes, setAttributes } ) {
+	const onChangeContent = ( val ) => {
+		setAttributes( { content: val } );
+	};
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Multidots Cta – hello from the editor!', 'multidots-cta' ) }
-		</p>
+		<>
+		<BlockControls>
+		<ToolbarGroup>
+			<ToolbarButton
+			title="Settings"
+			icon="admin-tools"
+			isActive={ true }
+			onClick={ () => console.log("Settings button was clicked") }
+			/>
+		</ToolbarGroup>
+		</BlockControls>
+
+			<RichText
+				{ ...useBlockProps() }
+				tagName="div"
+				onChange={ onChangeContent }
+				value={ attributes.content }
+				placeholder="Enter your text here..."
+			/>
+		</>
 	);
 }
