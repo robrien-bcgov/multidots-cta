@@ -25,17 +25,12 @@
 		"anchor": true
 	},
 	"attributes" : {
-		"content": {
-			"type": "string",
-			"source": "html",
-			"selector": "div"
-		},
 		"style": {
 			"type": "object",
 			"default": {
 				"color": {
 					"text": "#1f1f1f",
-					"background": "#ffeda3"
+					"background": "#fbfaf3"
 				},
 				"spacing": {
 					"padding": {
@@ -58,6 +53,9 @@
 			}
 		}
 	},
+	"parent": [
+		"core/post-content"
+	],
 	"textdomain": "multidots-cta",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

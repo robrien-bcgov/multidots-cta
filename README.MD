@@ -18,7 +18,15 @@ Example block scaffolded with Create Block tool.
 * EDIT.JS
   * Block controls! (in toolbar)
     * ToolbarGroup / ToolbarButton COMPONENTS! (can group items)
-
+      * Multiple toolbar groups in same toolbar (see Links toolbar button)
+  * Inspector controls
+    * sidebar controls - nice <PanelBody> component
+  * InnerBlocks
+    * put together a complicated 2-column layout with InnerBlocks and other core blocks.
+    * child blocks handle the content so we don't need a "content":{} section in block.json
+  * Template!
+    - Lock (shows up in block toolbar)
+    - Parent restriction (block.json - "parent")
 
 ## == Description ==
 

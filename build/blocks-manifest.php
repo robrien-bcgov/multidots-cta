@@ -32,17 +32,12 @@ return array(
 			'anchor' => true
 		),
 		'attributes' => array(
-			'content' => array(
-				'type' => 'string',
-				'source' => 'html',
-				'selector' => 'div'
-			),
 			'style' => array(
 				'type' => 'object',
 				'default' => array(
 					'color' => array(
 						'text' => '#1f1f1f',
-						'background' => '#ffeda3'
+						'background' => '#fbfaf3'
 					),
 					'spacing' => array(
 						'padding' => array(
@@ -64,6 +59,9 @@ return array(
 					)
 				)
 			)
+		),
+		'parent' => array(
+			'core/post-content'
 		),
 		'textdomain' => 'multidots-cta',
 		'editorScript' => 'file:./index.js',
