@@ -15,8 +15,18 @@
 	],
 	"example": {},
 	"supports": {
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+			},
+		"shadow": true,
 		"html": true,
-		"color": {},
+		"color": {
+			"text": true,
+			"background": true
+		},
 		"spacing": {
 			"padding": true,
 			"margin": true
@@ -25,13 +35,17 @@
 		"anchor": true
 	},
 	"attributes" : {
+		"textColor": {
+			"type": "string",
+			"default": "contrast"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "base"
+		},
 		"style": {
 			"type": "object",
 			"default": {
-				"color": {
-					"text": "#1f1f1f",
-					"background": "#fbfaf3"
-				},
 				"spacing": {
 					"padding": {
 						"top": "20px",

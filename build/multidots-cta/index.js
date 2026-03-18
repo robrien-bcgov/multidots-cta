@@ -60,15 +60,15 @@ function Edit({
 }) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
   const ALLOWED_BLOCKS = ["core/heading", "core/button", "core/paragraph", "core/image"];
-  const CTA_TEMPLATE = [['core/columns', {}, [['core/column', {}, [['core/heading', {
+  const CTA_TEMPLATE = [["core/columns", {}, [["core/column", {}, [["core/heading", {
     level: 2,
-    placeholder: 'Heading...'
-  }], ['core/paragraph', {
-    placeholder: 'Paragraph...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum arcu non lectus tristique dictum. Aenean ultrices justo leo, eu accumsan est malesuada vitae. Integer sed ex nibh.'
-  }], ['core/button', {
-    url: '#',
-    placeholder: 'CTA Button'
-  }]]], ['core/column', {}, [['core/image', {}]]]]]];
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Heading...")
+  }], ["core/paragraph", {
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Paragraph...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum arcu non lectus tristique dictum. Aenean ultrices justo leo, eu accumsan est malesuada vitae. Integer sed ex nibh.")
+  }], ["core/button", {
+    url: "#",
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("CTA Button")
+  }]]], ["core/column", {}, [["core/image", {}]]]]]];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, {
@@ -83,18 +83,18 @@ function Edit({
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
-          title: "Links",
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Links"),
           icon: "admin-links",
           onClick: () => console.log("Links button was clicked")
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: "Custom Settings",
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Custom Settings"),
         icon: "admin-appearance",
         initialOpen: true,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-          children: "Placeholder text"
+          children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Placeholder text")
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -289,7 +289,7 @@ module.exports = window["wp"]["i18n"];
   \**************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/multidots-cta","version":"0.1.0","title":"This is a CTA block","category":"design","icon":"feedback","description":"A simple call to action block.","keywords":["call to action","cta","multidots","marketing"],"example":{},"supports":{"html":true,"color":{},"spacing":{"padding":true,"margin":true},"align":true,"anchor":true},"attributes":{"style":{"type":"object","default":{"color":{"text":"#1f1f1f","background":"#fbfaf3"},"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"},"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}},"typography":{"fontSize":"16px","lineHeight":"1.5"}}}},"parent":["core/post-content"],"textdomain":"multidots-cta","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/multidots-cta","version":"0.1.0","title":"This is a CTA block","category":"design","icon":"feedback","description":"A simple call to action block.","keywords":["call to action","cta","multidots","marketing"],"example":{},"supports":{"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"shadow":true,"html":true,"color":{"text":true,"background":true},"spacing":{"padding":true,"margin":true},"align":true,"anchor":true},"attributes":{"textColor":{"type":"string","default":"contrast"},"backgroundColor":{"type":"string","default":"base"},"style":{"type":"object","default":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"},"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}},"typography":{"fontSize":"16px","lineHeight":"1.5"}}}},"parent":["core/post-content"],"textdomain":"multidots-cta","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 
