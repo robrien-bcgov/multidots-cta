@@ -74,12 +74,12 @@ export default function Edit({ attributes, setAttributes }) {
 			<BlockControls>
 				<ToolbarGroup>
 					<ToolbarButton
-						title="Settings"
+						title={__("Settings")}
 						icon="admin-settings"
 						onClick={() => console.log("Settings button was clicked")}
 					/>
 					<ToolbarButton
-						title="Tools"
+						title={__("Tools")}
 						icon="admin-tools"
 						onClick={() => console.log("Tools button was clicked")}
 					/>
