@@ -13,7 +13,6 @@ import { __ } from "@wordpress/i18n";
  */
 import {
 	useBlockProps,
-	RichText,
 	InnerBlocks,
 	BlockControls,
 	InspectorControls,
@@ -38,50 +37,64 @@ import "./editor.scss";
  */
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps();
-	const ALLOWED_BLOCKS = ["core/heading","core/button", "core/paragraph", "core/image"];
+	const ALLOWED_BLOCKS = [
+		"core/heading",
+		"core/button",
+		"core/paragraph",
+		"core/image",
+	];
 
-const CTA_TEMPLATE = [
-['core/columns', {}, [
-['core/column', {},
-[
-['core/heading', { level: 2, placeholder: 'Heading...' }],
-['core/paragraph', { placeholder: 'Paragraph...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum arcu non lectus tristique dictum. Aenean ultrices justo leo, eu accumsan est malesuada vitae. Integer sed ex nibh.' }],
-['core/button', { url: '#', placeholder: 'CTA Button' }],
-]
-],
-['core/column', {}, [
-['core/image', {}],
-]
-],]
-]
-];
+	const CTA_TEMPLATE = [
+		[
+			"core/columns",
+			{},
+			[
+				[
+					"core/column",
+					{},
+					[
+						["core/heading", { level: 2, placeholder: __("Heading...") }],
+						[
+							"core/paragraph",
+							{
+								placeholder:
+									__("Paragraph...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum arcu non lectus tristique dictum. Aenean ultrices justo leo, eu accumsan est malesuada vitae. Integer sed ex nibh."),
+							},
+						],
+						["core/button", { url: "#", placeholder: __("CTA Button") }],
+					],
+				],
+				["core/column", {}, [["core/image", {}]]],
+			],
+		],
+	];
 
 	return (
 		<>
 			<BlockControls>
 				<ToolbarGroup>
 					<ToolbarButton
-						title="Settings"
+						title={__("Settings")}
 						icon="admin-settings"
 						onClick={() => console.log("Settings button was clicked")}
 					/>
 					<ToolbarButton
-						title="Tools"
+						title={__("Tools")}
 						icon="admin-tools"
 						onClick={() => console.log("Tools button was clicked")}
 					/>
 				</ToolbarGroup>
 				<ToolbarGroup>
 					<ToolbarButton
-						title="Links"
+						title={__("Links")}
 						icon="admin-links"
 						onClick={() => console.log("Links button was clicked")}
 					/>
 				</ToolbarGroup>
 			</BlockControls>
 			<InspectorControls>
-				<PanelBody title="Custom Settings" icon="admin-appearance" initialOpen>
-					<p>Placeholder text</p>
+				<PanelBody title={__("Custom Settings")} icon="admin-appearance" initialOpen>
+					<p>{__("Placeholder text")}</p>
 				</PanelBody>
 			</InspectorControls>
 			{/* This acts as a container for the inner blocks, allowing users to add and edit them within this block. */}

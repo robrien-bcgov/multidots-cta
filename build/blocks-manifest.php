@@ -20,9 +20,17 @@ return array(
 			
 		),
 		'supports' => array(
+			'__experimentalBorder' => array(
+				'color' => true,
+				'radius' => true,
+				'style' => true,
+				'width' => true
+			),
+			'shadow' => true,
 			'html' => true,
 			'color' => array(
-				
+				'text' => true,
+				'background' => true
 			),
 			'spacing' => array(
 				'padding' => true,
@@ -32,13 +40,17 @@ return array(
 			'anchor' => true
 		),
 		'attributes' => array(
+			'textColor' => array(
+				'type' => 'string',
+				'default' => 'contrast'
+			),
+			'backgroundColor' => array(
+				'type' => 'string',
+				'default' => 'base'
+			),
 			'style' => array(
 				'type' => 'object',
 				'default' => array(
-					'color' => array(
-						'text' => '#1f1f1f',
-						'background' => '#fbfaf3'
-					),
 					'spacing' => array(
 						'padding' => array(
 							'top' => '20px',
